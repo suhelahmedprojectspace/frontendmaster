@@ -40,10 +40,10 @@ function UserDirectory() {
     );
   }, [data, debouncedQuery]);
 
-  // Calculate total pages based on filtered users
+
   const noOfPages = Math.ceil(filteredUsers.length / perPage);
 
-  // Get users for current page
+ 
   const paginatedUsers = useMemo(() => {
     const start = (currentPage - 1) * perPage;
     return filteredUsers.slice(start, start + perPage);
